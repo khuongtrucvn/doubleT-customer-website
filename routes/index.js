@@ -22,4 +22,8 @@ router.get('/gio-hang.hbs', function(req, res, next) {
   res.render('gio-hang', { title: 'DoubleT | Giỏ hàng' });
 });
 
+router.get('/thanh-toan.hbs', function(req, res, next) {
+  res.render('thanh-toan', { title: 'DoubleT | Thanh toán' });
+});
+
 module.exports = router;
