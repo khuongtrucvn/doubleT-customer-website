@@ -18,4 +18,8 @@ router.get('/tai-khoan.hbs', function(req, res, next) {
   res.render('tai-khoan', { title: 'DoubleT | Tài khoản' });
 });
 
+router.get('/gio-hang.hbs', function(req, res, next) {
+  res.render('gio-hang', { title: 'DoubleT | Giỏ hàng' });
+});
+
 module.exports = router;
