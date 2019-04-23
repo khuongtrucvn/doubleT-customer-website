@@ -26,4 +26,8 @@ router.get('/thanh-toan.hbs', function(req, res, next) {
   res.render('thanh-toan', { title: 'DoubleT | Thanh toán' });
 });
 
+router.get('/thong-tin-san-pham.hbs', function(req, res, next) {
+  res.render('thong-tin-san-pham', { title: 'DoubleT | Thông tin sản phẩm' });
+});
+
 module.exports = router;
