@@ -34,4 +34,8 @@ router.get('/san-pham.hbs', function(req, res, next) {
   res.render('san-pham', { title: 'DoubleT | Games' });
 });
 
+router.get('/wishlist.hbs', function(req, res, next) {
+  res.render('wishlist', { title: 'DoubleT | Wishlist' });
+});
+
 module.exports = router;
