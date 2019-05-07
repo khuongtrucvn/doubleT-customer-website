@@ -38,4 +38,8 @@ router.get('/wishlist.hbs', function(req, res, next) {
   res.render('wishlist', { title: 'DoubleT | Wishlist' });
 });
 
+//router.get('/', function(req, res) {
+  //res.redirect('/catalog');
+//});
+
 module.exports = router;
