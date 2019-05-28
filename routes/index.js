@@ -1,7 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+var trangchu_controller = require('../controllers/indexController');
+
+/* GET home page.
 router.get('/', function(req, res, next) {
   res.render('trang-chu', { title: 'DoubleT | Trang chủ' });
 });
@@ -36,10 +38,8 @@ router.get('/san-pham.hbs', function(req, res, next) {
 
 router.get('/wishlist.hbs', function(req, res, next) {
   res.render('wishlist', { title: 'DoubleT | Wishlist' });
-});
+});*/
 
-//router.get('/', function(req, res) {
-  //res.redirect('/catalog');
-//});
+router.get('/', trangchu_controller.index);
 
 module.exports = router;

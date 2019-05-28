@@ -4,9 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-//var catalogRouter = require(./routes/catalog);
+
+//var nguoidungRouter = require('./routes/nguoidung');
+//var catalogRouter = require('./routes/catalog');
+
+
+//var donhangRouter = require('./routes/donhang');
 
 var app = express();
 
@@ -20,9 +23,21 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+/**
+ * Routing
+ */
+var indexRouter = require('./routes/index');
+var theloaiRouter = require('./routes/theloai');
+var gameRouter = require('./routes/game');
+ 
+//app.get('/',(req,res) => res.render('trang-chu'));
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/game', gameRouter);
+app.use('/theloai', theloaiRouter);
+
+//app.use('/nguoi-dung', nguoidungRouter);
 //app.use('/catalog', catalogRouter);
+//app.use('/donhang', donhangRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

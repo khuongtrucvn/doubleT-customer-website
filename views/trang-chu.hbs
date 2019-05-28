@@ -17,34 +17,14 @@
             <ul class="nav navbar-nav">
               <li><a class="active" href="/">TRANG CHỦ</a></li>
 			  <li><a href="#">TIN TỨC</a></li>
-              <li><a href="san-pham.hbs">GAME <span class="caret"></span></a>
-                <ul class="dropdown-menu">                
-                  <li><a href="#">Hành động</a>
-					<ul class="dropdown-menu">
-                      <li><a href="#">FPS</a></li>
-                      <li><a href="#">TPF</a></li>
-                      <li><a href="#">Chặt chém</a></li>                                      
-                    </ul>
-				  </li>
-                  <li><a href="#">Phiêu lưu</a>
-					<ul class="dropdown-menu">
-                      <li><a href="#">Thế giới mở</a></li>
-                      <li><a href="#">Nhập vai</a></li>
-                      <li><a href="#">Sinh tồn</a></li>
-                      <li><a href="#">Kinh dị</a></li>
-                      <li><a href="#">Steath</a></li>						
-                    </ul>
-				  </li>
-                  <li><a href="#">Chiến thuật</a></li>
-                  <li><a href="#">Thể thao</a></li>                                                
-                  <li><a href="#">Khác</a>
-					<ul class="dropdown-menu">
-                      <li><a href="#">Indie</a></li>
-                      <li><a href="#">Mô phỏng-quản lý</a></li>
-                      <li><a href="#">Multiplayer</a></li>						
-                    </ul>
-				  </li>              
-                </ul>
+              <li><a href="/game/list">GAME <span class="caret"></span></a>
+                <ul class="dropdown-menu">                					
+					{{#if categories}}
+						{{#each categories}}
+							<li><a href="#">{{this.name}}</a></li>
+						{{/each}}
+                    {{/if}}
+				</ul>
               </li>              		  
               <li><a href="#">THÔNG TIN<span class="caret"></span></a>
                 <ul class="dropdown-menu">                
